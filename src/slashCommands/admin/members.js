@@ -1,0 +1,43 @@
+
+let { SlashCommandBuilder } = require('@discordjs/builders')
+
+module.exports = {
+    slashCommand: new SlashCommandBuilder()
+    .setName('members')
+    .setDescription('Показать информацию о организации')
+    .addStringOption(option =>
+        option
+        .setName('фракция')
+        .setDescription('роль какой фракции будет выдана')
+        .addChoice('Los-Santos Police Department', 'LSPD')
+        .addChoice('San-Fierro Police Department', 'SFPD')
+        .addChoice('Las-Venturas Police Department', 'LVPD')
+        .addChoice('Red-Country Sheriff\'s Department', 'RCSD')
+        .addChoice('F.B.I', 'FBI')
+        .addChoice('Los-Santos Medical Center', 'LSMC')
+        .addChoice('San-Fierro Medical Center', 'SFMC')
+        .addChoice('Las-Venturas Medical Center', 'LVMC')
+        .addChoice('Тюрьма строгого режима LV', 'TSR')
+        .addChoice('Армия LS', 'LSA')
+        .addChoice('Армия SF', 'SFA')
+        .addChoice('TV Студия LS', 'TVLS')
+        .addChoice('TV Студия LV', 'TVLV')
+        .addChoice('TV Студия SF', 'TVSF')
+        .addChoice('Правительство LS', 'GOV')
+        .addChoice('Автошкола SF', 'GCL')
+        .addChoice('Центральный Банк', 'FRS')
+        .addChoice('Страховая Компания', 'STK')
+        // .addChoice('Vagos', 'Vagos')
+        // .addChoice('Grove', 'Grove')
+        // .addChoice('Night Wolves', 'NW')
+        // .addChoice('Rifa', 'Rifa')
+        // .addChoice('Aztec', 'Aztec')
+        // .addChoice('Ballas', 'Ballas')
+        // .addChoice('La Cosa Nostra', 'LCN')
+        // .addChoice('Russian Mafia', 'RM')
+        // .addChoice('Yakuza', 'Yakuza')
+        // .addChoice('Warlock MC', 'Warlock')
+        .setRequired(true)
+    )
+    ,
+}
